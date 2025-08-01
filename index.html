@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para ti, mi amor</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #184932; 
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .big-lily {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 180px;
+      opacity: 0.85;
+      animation: floatBigLily 12s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes floatBigLily {
+      0% { transform: translate(-50%, -50%) translateY(0px); }
+      50% { transform: translate(-50%, -50%) translateY(-15px); }
+      100% { transform: translate(-50%, -50%) translateY(0px); }
+    }
+
+    .leaf {
+      position: absolute;
+      width: 60px;
+      opacity: 0.4;
+      animation: leafFall 12s linear infinite;
+    }
+
+    .leaf1 { top: -10%; left: 20%; animation-delay: 0s; }
+    .leaf2 { top: -15%; left: 50%; animation-delay: 3s; }
+    .leaf3 { top: -5%; left: 80%; animation-delay: 6s; }
+
+    @keyframes leafFall {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(40vh) rotate(180deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="bestpart.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="container">
+    <h1>Feliz Día mi amor </h1>
+    <p>
+      amor yo queria expresarte en este detalle todo lo que siento
+      por ti: eres lo que mi corazon ama, lo que mi cuerpo nesecita 
+      lo que mi alma anhela; que eres lo que mas quiero en este mundo 
+      y si la vida fuera una pelicula tu serias la "mejor parte" 
+    </p>
+  </div>
+
+  <!-- Flor central grande -->
+  <img src="lily.png" class="big-lily" alt="Lirio rosa enorme" />
+
+  <!-- Hojas flotantes -->
+  <img src="leaf.png" class="leaf leaf1" alt="Hoja cayendo" />
+  <img src="leaf.png" class="leaf leaf2" alt="Hoja cayendo" />
+  <img src="leaf.png" class="leaf leaf3" alt="Hoja cayendo" />
+</body>
+</html>
